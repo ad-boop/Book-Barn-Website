@@ -324,7 +324,7 @@ p{
 
 .slider .navigation .btn{
   background: rgba(255, 255, 255, 0.5);
-  width: 20%;
+  width: 5%;
   height: 20%;
   margin: 10px;
   border-radius: 50%;
@@ -384,12 +384,22 @@ p{
 }
 
 /* MAIN SECTION */
+.main{
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
 /* Create two equal columns that floats next to each other */
 .column {
   float: left;
-  width: 30%;
   padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+.left {
+  width: 25%;
+}
+
+.right {
+  width: 75%;
 }
 
 /* Clear floats after the columns */
@@ -399,7 +409,77 @@ p{
   clear: both;
 }
 
+/* GENRE TABLE */
 
+table, td, th #genre-table{
+  background: var(--razzmatazz);
+  border: 3px solid black;
+  border-collapse: collapse;
+  padding: 10px;
+}
+
+table th{
+  background: var(--smoky-black);
+  color: #cacdd2;
+  padding: 20px;
+}
+
+#genre-table{
+  font-size: 1.9rem;
+  font-weight: 500;
+  width: 100%;
+  height: 90%;
+  text-align: center;
+}
+
+#genre-table td:hover {
+  background-color: var(--quinacridone-magenta);
+}
+
+
+/* TOP BOOKS */
+
+#top-books h2{
+  font-size: 4.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.book-boxes{
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 25px;
+}
+.book-boxes .card{
+  background-color: var(--palatinate-purple);
+  border-radius: 10px;
+  padding: 1em;
+  box-shadow: 0px 10px 5px var(--smoky-black);
+  text-align: center;
+  
+}
+
+.card .title{
+  font-size: 18px;
+  font-weight: bold;
+  color: #cacdd2;
+}
+
+.card .image{
+  height: 250px;
+}
+.card img{
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
+}
+
+.card .text{
+  margin-left: 2em;
+  margin-bottom: 0.5em;
+}
 
 /* FORMS */
 /* Style the button that is used to open and close the collapsible content */
