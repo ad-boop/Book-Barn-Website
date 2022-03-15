@@ -35,6 +35,11 @@ section {
   padding: 2rem 9%;
 }
 
+p{
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
 .heading {
   text-align: center;
   background: #e84393;
@@ -377,6 +382,24 @@ section {
     bottom: 10px;
   }
 }
+
+/* MAIN SECTION */
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 30%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
 
 /* FORMS */
 /* Style the button that is used to open and close the collapsible content */
