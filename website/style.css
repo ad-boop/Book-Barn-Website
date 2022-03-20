@@ -22,6 +22,7 @@
     text-transform: capitalize;
     -webkit-transition: all .2s linear;
     transition: all .2s linear;
+    
 }
 
 html {
@@ -30,14 +31,28 @@ html {
 }
 body{
   background: var(--quinacridone-magenta);
+  overflow-x: hidden; 
 }
 section {
   padding: 2rem 9%;
+  margin-bottom: 35px;
+  margin-top: 15px;
 }
 
 p{
   font-size: 1.5rem;
   font-weight: 500;
+}
+
+h1{
+  font-size: 5rem;
+  margin: 15px;
+  text-align: center;
+  color: #cacdd2;
+  font-weight: bold;
+  background: -webkit-linear-gradient(#cacdd2, var(--razzmatazz));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .heading {
@@ -418,13 +433,14 @@ table, td, th #genre-table{
   padding: 10px;
 }
 
+
 table th{
   background: var(--smoky-black);
   color: #cacdd2;
   padding: 20px;
 }
 
-#genre-table{
+#genre-table, #top-author-table{
   font-size: 1.9rem;
   font-weight: 500;
   width: 100%;
@@ -604,9 +620,223 @@ table th{
 }
 
 
+/* ADD BOOK REVIEW SECTION */
+.review-message{
+  width: 70%;
+  height: 40%;
+  padding: 10%;
+  border: 7px solid var(--old-burgundy);
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  background: var(--old-burgundy);
+  border: 10px solid var(--razzmatazz);
+}
+
+.review-message p#question{
+  font-size:40px;
+  font-weight: 600;
+  color: #cacdd2;
+}
+
+.review-message p{
+  margin-top: 5%;
+  font-size: 35px;
+  color: #cfd2d6;
+}
+
+button#add-to-review{
+  padding: 15px;
+  background: var(--razzmatazz);
+  font-weight: 600;
+  font-size: large;
+  margin-top: 25px;
+}
+
+button#add-to-review:hover{
+  background: linear-gradient(to right,var(--quinacridone-magenta),var(--razzmatazz));
+  color: #cacdd2;
+  font-weight: 800;
+}
 
 
 
+/* USER ACCOUNT  SECTION*/
+.user-account{
+  display: none;
+  background: var(--old-burgundy);
+}
+
+.user-left {
+  width: 65%;
+}
+.user-right{
+  width: 35%;
+}
+
+.user-details-edit{
+  width: 90%;
+  height: 40%;
+  background: var(--palatinate-purple);
+  padding: 5%;
+  border: 7px solid #cacdd2;
+}
+h3{
+  color:#cacdd2;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+.user-details-edit label{
+  font-size: 2rem;
+  color: var(--razzmatazz);
+}
+
+/* Style inputs with type="text", select elements and textareas */
+.user-details-edit input[type=text],.user-details-edit input[type=email],.user-details-edit input[type=password],.user-details-edit input[type=date], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+.user-details-edit input[type=submit] {
+  background-color: var(--razzmatazz);
+  margin: 5px;
+  width: 100%;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+.user-details-edit input[type=submit]:hover {
+  background: linear-gradient(to right,var(--quinacridone-magenta),var(--razzmatazz));
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+
+.user-reviews{
+  padding: 20px;
+  background: var(--palatinate-purple);
+  width: 100%;
+  border: 5px solid #cacdd2;
+}
+
+.review-card{
+  background: var(--razzmatazz);
+  border-radius: 10px;
+  margin-bottom: 25px;
+  padding: 15px;
+}
+
+.review-card h2{
+  font-size: 3rem;
+  text-align: center;
+}
+
+.user-likes{
+  background: var(--palatinate-purple);
+  margin-top: 35px;
+  border-radius: 10px;
+  border: 5px solid #cacdd2;
+}
+
+
+.likes-box{
+  background-color: var(--quinacridone-magenta);
+  float:left;
+  width: 25%;
+  padding: 10px;
+  height: 100px;
+  margin: 30px;/* Should be removed. Only for demonstration */
+  border: 5px solid var(--smoky-black);
+  border-radius: 10px;
+}
+
+i.fa-heart{
+  color: var(--razzmatazz);
+  font-size: 3rem;
+  float: right;
+}
+
+#genre-boxes{
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 25px;
+}
+
+.search-section{
+  background: var(--old-burgundy);
+}
+
+
+.search {
+  width: 600px;
+  height: 41px;
+  margin: 40px auto;
+  background: #444;
+  background: var(--quinacridone-magenta);
+  border-radius: 5px;
+  border: 2px solid #fff;
+}
+
+.search ::placeholder{
+  color: var(--smoky-black);
+  padding: 2px;
+}
+.search input {
+  width: 370px;
+  padding: 5px 5px;
+  float: left;
+  color: #ccc;
+  font-weight: 600;
+  font-size: 2rem;
+  border: 0;
+  background: transparent;
+  border-radius: 3px 0 0 3px;
+}
+.search input:focus {
+  outline: 0;
+  background: transparent;
+}
+.search button {
+  position: relative;
+  float: right;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  height: 41px;
+  width: 120px;
+  color: #fff;
+  font-weight: bold;
+  background: transparent;
+  border-left: 2px solid #fff;
+  border-radius: 0 3px 3px 0;
+}
+.search button:hover {
+  background: linear-gradient(180deg,var(--razzmatazz),var(--smoky-black));
+  color: #cacdd2;
+}
+.search button:active {
+  box-shadow: 0px 0px 12px 0px rgba(225, 225, 225, 1);
+}
+.search button:focus {
+  outline: 0;
+}
 
 
 
@@ -619,9 +849,9 @@ footer{
   background: var(--smoky-black);
   height: auto;
   width: 100vw;
-
   padding-top: 20px;
   color: #fff;
+  overflow: hidden;
 }
 .footer-content{
   display: flex;
