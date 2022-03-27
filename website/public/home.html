@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Barn</title>
+    <link rel="icon" type="image/png" href="images/Book Barn-logos.jpeg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="client.js"></script>
+</head>
+<body>
+    <!-- header section starts  -->
+    <header class="header">
+
+        <!-- LOGO -->
+        <a href="home.html" class="logo"> BOOK BARN </a>
+
+        <!-- NAV BAR BEGINS -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="home.html">home</a></li>
+                <li class="searchbar">
+                    <i class="fa fa-search" aria-hidden="true" id="search"></i>
+                     <div class="togglesearch">
+                        <input type="text" placeholder=""/>
+                        <input type="button" value="Search"/>
+                    </div>
+                </li>
+                <li><a href="contact.html">login</a></li>
+                <li><a href="account.html">account</a></li>
+            </ul>
+        </nav>
+        <!-- NAV BAR ENDS -->
+
+        <!-- SEARCH BAR -->
+        <form action="" class="search-form">
+            <input type="search" name="" placeholder="search here..." id="search-box">
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
+    </header>
+    <!-- header section ends -->
+
+    <!-- banner starts -->
+    <div class="banner">
+        <!-- SLIDER -->
+        <div class="slider">
+            <div class="slide active">
+                <img src="images/banner1.png" alt="">
+                
+              </div>
+              <div class="slide">
+                <img src="images/banner2.png" alt="">
+              </div>
+              <div class="slide">
+                <img src="images/banner3.png" alt="">
+              </div>
+              <div class="slide">
+                <img src="images/banner4.png" alt="">
+              </div>
+              
+              <div class="navigation">
+                <div class="btn active"></div>
+                <div class="btn"></div>
+                <div class="btn"></div>
+                <div class="btn"></div>
+              </div>
+        </div>
+    </div>
+    <!-- banner ends-->
+
+    
+    <!-- MAIN SECTION STARTS -->
+    <section class="main">
+        <div class="row">
+            <div class="column left">
+                <!-- genre table -->
+              <table id="genre-table">
+                    <tr><th>GENRE</th></tr>
+                    <tbody>
+                        <tr><td>Thriller</td></tr>
+                        <tr><td>Science Fiction</td></tr>
+                        <tr><td>Fantasy</td></tr>
+                    </tbody>
+              </table>
+
+              <!-- top authors table -->
+              <!-- <table id="top-author-table" style="margin-top: 25%;">
+                    <tr><th>TOP AUTHORS</th></tr>
+                    <tbody>
+                        <tr><td>Thriller</td></tr>
+                        <tr><td>Science Fiction</td></tr>
+                        <tr><td>Fantasy</td></tr>
+                    </tbody>
+            </table> -->
+            </div>
+
+            <div class="column right" id="top-books">
+                <!-- TOP BOOKS BASED ON LIKES -->
+              <h2>TOP BOOKS</h2>
+              <div class="book-boxes">
+                  <div class="card">
+                      <div class="title">Alice In Wonderland</div>
+                      <div class="image">
+                          <img src="images/alice.jpg" alt="">
+                      </div>
+                      <div class="text">
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam cum libero explicabo temporibus sed at.</p>
+                      </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="title">Alice In Wonderland</div>
+                    <div class="image">
+                        <img src="images/alice.jpg" alt="">
+                    </div>
+                    <div class="text">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam cum libero explicabo temporibus sed at.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="title">Alice In Wonderland</div>
+                    <div class="image">
+                        <img src="images/alice.jpg" alt="">
+                    </div>
+                    <div class="text">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam cum libero explicabo temporibus sed at.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="title">Alice In Wonderland</div>
+                    <div class="image">
+                        <img src="images/alice.jpg" alt="">
+                    </div>
+                    <div class="text">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam cum libero explicabo temporibus sed at.</p>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </section>
+    <!-- MAIN SECTION ENDS -->
+
+
+    <button type="button" class="collapsible forms">Login/Registration Form</button>
+    <!-- login / registration section STARTS -->
+    <section class="login-reg-form">
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="login()">Login</button>
+                <button type="button" class="toggle-btn" onclick="register()">Register</button>
+            </div>
+
+            <!-- LOGIN FORM -->
+            <form action="" id="login"" class="input-group">
+                <input type="email" class="input-field" placeholder="email id">
+                <input type="password" class="input-field" placeholder="password">
+                <button type="submit" class="submit-btn">Login</button>
+            </form>
+
+            <!-- REG FORM -->
+            <form action="" id="register"" class="input-group">
+                <input type="text" class="input-field"  id="inputName" placeholder="Name">
+                <input type="date" class="input-field"  id="inputDate" placeholder="Date">
+                <input type="email" class="input-field"  id="inputEmail" placeholder="email id">
+                <input type="password" class="input-field" id="inputPassword"  placeholder="password">
+                <button type="submit" class="submit-btn" onclick="addUser()">Register</button>
+            </form>
+        </div>
+    </section>
+    <!-- LOGIN REG SECTIONS ENDS -->
+
+
+    <!-- BOOK REVIEW SECTION STARTS -->
+    <!-- book review write up -->
+    <section class="add-book-review">
+        <h1>ADD BOOK REVIEW SECTION</h1>
+        <div class="review-message">
+            <p id="question">Interested in posting <br> your thoughts on any books?</p>
+            <p>Click the button below <i class="fa fa-arrow-circle-down"></i></p>
+            
+            <!-- button for writing review -->
+            <button id="add-to-review">Add Book Review</button>
+        </div>
+        
+        <div class="review-form">
+            <h3>Add Book Review</h3>
+            <div class="row">
+                <div class="add-photo column review-left">
+                    <div class="image-box">
+                        <img src="" alt="">
+                    </div>
+                </div>
+
+                <div class="book-form column review-right">
+                    <form action="action_page.php">
+                        <label for="name">Book Title</label>
+                        <input type="text" id="name" name="name" placeholder="Your name..">
+                    
+                        <label for="email">Book Author</label>
+                        <input type="text" id="email" name="email" placeholder="">
+
+                        <label for="name">Password</label>
+                        <input type="text" id="password" name="password" placeholder="Your name..">
+                    
+                        <label for="name">Give your Review</label>
+                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                    
+                        <input type="submit" value="Add Review">
+                    </form>
+                </div>
+            </div>  
+        </div>
+    </section>
+    <!-- BOOK REVIEW SECTION ENDS -->
+
+
+    <button type="button" class="collapsible account">Account</button>
+    <!-- USER ACCOUNT SECTION STARTS -->
+    <section class="user-account">
+        <h1>ACCOUNT SECTION</h1>
+        <div class="row">
+            <div class="column user-left">
+                <!-- USER ACCOUNT EDITING FORM -->
+                <div class="user-details-edit">
+                    <h3>User Account</h3>
+                    <form action="action_page.php">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your name..">
+                    
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="">
+
+                        <label for="name">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Your name..">
+                    
+                        <label for="name">Date of Birth</label>
+                        <input type="date" id="password" name="password" placeholder="Your name..">
+                    
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+
+            <div class="column user-right">
+                <!-- USER WRITTEN REVIEWS -->
+                <div class="user-reviews">
+                    <h3>Your Reviews</h3>
+
+                    <div class="review-card">
+                        <h2>Alice in Wonderland</h2>
+                    </div>
+
+                    <div class="review-card">
+                        <h2>Alice in Wonderland</h2>
+                    </div>
+
+                    <div class="review-card">
+                        <h2>Alice in Wonderland</h2>
+                    </div>
+
+                    <div class="review-card">
+                        <h2>Alice in Wonderland</h2>
+                    </div>
+
+                    <div class="review-card">
+                        <h2>Alice in Wonderland</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- USER LIKES -->
+        <div class="user-likes">
+            <h3>Your Likes</h3>
+            <!-- LIKES BOXES SECTION -->
+            <div class="likes-section">
+                <div class="row">
+                    <div class="likes-box">
+                      <h2>Column 1</h2>
+                      <p>Some text..</p>
+                      <i class="fa fa-heart"></i>
+                    </div>
+                    <div class="likes-box">
+                      <h2>Column 2</h2>
+                      <p>Some text..</p>
+                      <i class="fa fa-heart"></i>
+                    </div>
+                    <div class="likes-box">
+                      <h2>Column 3</h2>
+                      <p>Some text..</p>
+                      <i class="fa fa-heart"></i>
+                    </div>
+                    <div class="likes-box">
+                      <h2>Column 4</h2>
+                      <p>Some text..</p>
+                      <i class="fa fa-heart"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ACCOUNT SECTION ENDS -->
+
+
+    <!-- GENRE SECTION STARTS -->
+    <section class="genre-section">
+        <h1>GENRE SECTION</h1>
+
+        <!-- GENRE SECTION BOXES CATEGORIES -->
+        <div class="genre-categories">
+            <div class="book-boxes" id="genre-boxes">
+                <div class="card">
+                    <div class="title">Alice In Wonderland</div>
+                    <div class="image">
+                        <img src="images/alice.jpg" alt="">
+                    </div>
+                    <div class="text">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam cum libero explicabo temporibus sed at.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                  <div class="title">Alice In Wonderland</div>
+                  <div class="image">
+                      <img src="images/alice.jpg" alt="">
+                  </div>
+                  <div class="text">
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam cum libero explicabo temporibus sed at.</p>
+                  </div>
+              </div>
+
+              <div class="card">
+                  <div class="title">Alice In Wonderland</div>
+                  <div class="image">
+                      <img src="images/alice.jpg" alt="">
+                  </div>
+                  <div class="text">
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam cum libero explicabo temporibus sed at.</p>
+                  </div>
+              </div>
+
+              <div class="card">
+                  <div class="title">Alice In Wonderland</div>
+                  <div class="image">
+                      <img src="images/alice.jpg" alt="">
+                  </div>
+                  <div class="text">
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam cum libero explicabo temporibus sed at.</p>
+                  </div>
+              </div>
+            </div>
+        </div>
+    </section>
+    <!-- GENRE SECTION ENDS -->
+    
+
+    <!-- SEARCH SECTION STARTS -->
+    <section class="search-section">
+        <h1>SEARCH RESULTS</h1>
+        
+        <form class="search" action="">
+            <input type="search" placeholder="Search here..." required>
+            <button type="submit">Search</button>
+        </form> 
+    </section>
+    <!-- SEARCH SECTION ENDS -->
+
+    
+    <!-- footer starts -->
+    <<footer>
+        <div class="footer-content">
+            <h3>Book Barn</h3>
+            <p>For the Love for books and fun</p>
+            <ul class="socials">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-envelope-open"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>copyright &copy; <a href="#">Foolish Developer</a>  </p>
+        </div>
+
+    </footer>
+    <!-- footer ends -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
