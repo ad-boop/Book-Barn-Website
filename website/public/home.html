@@ -28,7 +28,7 @@
                         <input type="button" value="Search"/>
                     </div>
                 </li>
-                <li><a href="contact.html">login</a></li>
+                <li><a href="#forms" onclick="loginClick()">login</a></li>
                 <li><a href="account.html">account</a></li>
             </ul>
         </nav>
@@ -146,9 +146,10 @@
     <!-- MAIN SECTION ENDS -->
 
 
-    <button type="button" class="collapsible forms">Login/Registration Form</button>
+    <!-- <button type="button" class="collapsible forms">Login/Registration Form</button> -->
     <!-- login / registration section STARTS -->
-    <section class="login-reg-form">
+    <section class="login-reg-form" id="forms">
+        <h1>LOGIN/REGISTRATION FORMS</h1>
         <div class="form-box">
             <div class="button-box">
                 <div id="btn"></div>
@@ -178,17 +179,18 @@
 
     <!-- BOOK REVIEW SECTION STARTS -->
     <!-- book review write up -->
+    <button type="button" class="collapsible forms">ADD BOOK REVIEW</button>
     <section class="add-book-review">
         <h1>ADD BOOK REVIEW SECTION</h1>
-        <div class="review-message">
+        <div class="review-message" id="review-message">
             <p id="question">Interested in posting <br> your thoughts on any books?</p>
             <p>Click the button below <i class="fa fa-arrow-circle-down"></i></p>
             
             <!-- button for writing review -->
-            <button id="add-to-review">Add Book Review</button>
+            <button id="add-to-review" onclick="writeReviewClick()">Add Book Review</button>
         </div>
         
-        <div class="review-form">
+        <div class="review-form" id="review-form">
             <h3>Add Book Review</h3>
             <div class="row">
                 <div class="add-photo column review-left">

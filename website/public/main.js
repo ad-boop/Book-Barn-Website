@@ -96,10 +96,20 @@ $(document).ready(function() {
 });
 
 
-var writeReview=document.getElementsByClassName("");
 
 
+function writeReviewClick(){
+  var writeReview=document.getElementById("review-form");
+  writeReview.style.display="block";
+  document.getElementById("review-message").style.display="none";
+}
 
 
+function loginClick(){
+  
+  var forms=document.getElementById("forms");
+  forms.style.display="block";
+  
+}
 
 
