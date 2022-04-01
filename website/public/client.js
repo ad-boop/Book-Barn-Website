@@ -3,18 +3,20 @@
 // let userDiv;
 // let addUserResultDiv;
 
-// //Set up page when window has loaded
-// window.onload = init;
+//Set up page when window has loaded
+window.onload = init;
 
-// //Get pointers to parts of the DOM after the page has loaded.
-// function init(){
-//     userDiv = document.getElementById("userDiv");
-//     addUserResultDiv = document.getElementById("AddUserResult");
-//     loadUsers();
-// }
+//Get pointers to parts of the DOM after the page has loaded.
+function init(){
+    // userDiv = document.getElementById("userDiv");
+    // addUserResultDiv = document.getElementById("AddUserResult");
+    loginUser();
+}
 
-// /* Loads current users and adds them to the page. */
-// function loadUsers() {
+/* Loads current users and adds them to the page. */
+// function loginUser() {
+//     let emailLogin=document.getElementById("inputEmailLogin").value.trim();
+//     let passwordLogin=document.getElementById("inputPasswordLogin").value.trim();
 //     //Set up XMLHttpRequest
 //     let xhttp = new XMLHttpRequest();
 //     xhttp.onreadystatechange = () => {//Called when data returns from server
@@ -29,10 +31,13 @@
 //             //Build string with user data
 //             let htmlStr = "<table><tr><th>ID</th><th>Name</th><th>Email</th><th>Age</th></tr>";
 //             for(let key in usrArr){
+//                 if(emailLogin===usrArr[key].email && passwordLogin===usrArr[key].password){
+
+//                 }
 //                 htmlStr += ("<tr><td>" + key + "</td><td>" + usrArr[key].name + "</td>");
 //                 htmlStr += ("<td>" + usrArr[key].email + "</td><td>" + usrArr[key].age + "</td></tr>");
 //             }
-//             //Add users to page.
+//             // Add users to page.
 //             htmlStr += "</table>";
 //             userDiv.innerHTML = htmlStr;
 //         }
@@ -50,13 +55,13 @@ function addUser() {
     let xhttp = new XMLHttpRequest();
 
     //Extract user data
-    let userName = document.getElementById("inputName").value;
-    let userEmail = document.getElementById("inputEmail").value;
-    let userDOB = document.getElementById("inputDate").value;
-    let userPassword = document.getElementById("inputPassword").value;
+    let userName = document.getElementById("inputName").value.trim();
+    let userEmail = document.getElementById("inputEmail").value.trim();
+    let userDOB = document.getElementById("inputDate").value.trim();
+    let userPassword = document.getElementById("inputPassword").value.trim();
 
     //Create object with user data
-    let custObj = {
+    let userObject = {
         name: userName,
         email: userEmail,
         password:userPassword,
@@ -64,17 +69,25 @@ function addUser() {
     };
     
     //Set up function that is called when reply received from server
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
+    xhttp.onreadystatechange = ()=> {
+        // alert(xhttp.readyState);
+        if (xhttp.readyState == 4 && xhttp.status == 200) {
             alert("User added Successfully");
         }
-        else{
-            alert("Error adding User")
-        }
+        // else{
+        //     // alert("y");
+        //     // alert("response: "+JSON.parse(xhttp.responseText));
+        //     alert("Error adding User");
+        // }
     };
 
     //Send new user data to server
     xhttp.open("POST", "/user", true);
     xhttp.setRequestHeader("Content-type", "application/json");
-    xhttp.send( JSON.stringify(custObj) );
+    xhttp.send( JSON.stringify(userObject) );
 }
+
+
+
+
+

@@ -100,8 +100,9 @@ $(document).ready(function() {
 
 function writeReviewClick(){
   var writeReview=document.getElementById("review-form");
-  writeReview.style.display="block";
   document.getElementById("review-message").style.display="none";
+  writeReview.style.display="block";
+  
 }
 
 
@@ -113,3 +114,4 @@ function loginClick(){
 }
 
 
+// FORMS VALIDATION

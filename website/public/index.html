@@ -22,11 +22,12 @@
             <ul>
                 <li><a href="home.html">home</a></li>
                 <li class="searchbar">
+                    
                     <i class="fa fa-search" aria-hidden="true" id="search"></i>
-                     <div class="togglesearch">
+                     <!-- <div class="togglesearch">
                         <input type="text" placeholder=""/>
                         <input type="button" value="Search"/>
-                    </div>
+                    </div> -->
                 </li>
                 <li><a href="#forms" onclick="loginClick()">login</a></li>
                 <li><a href="account.html">account</a></li>
@@ -35,10 +36,10 @@
         <!-- NAV BAR ENDS -->
 
         <!-- SEARCH BAR -->
-        <form action="" class="search-form">
+        <!-- <form action="" class="search-form">
             <input type="search" name="" placeholder="search here..." id="search-box">
             <label for="search-box" class="fas fa-search"></label>
-        </form>
+        </form> -->
     </header>
     <!-- header section ends -->
 
@@ -75,15 +76,18 @@
     <section class="main">
         <div class="row">
             <div class="column left">
+
                 <!-- genre table -->
-              <table id="genre-table">
-                    <tr><th>GENRE</th></tr>
-                    <tbody>
-                        <tr><td>Thriller</td></tr>
-                        <tr><td>Science Fiction</td></tr>
-                        <tr><td>Fantasy</td></tr>
-                    </tbody>
-              </table>
+              <div class="genres">
+                  <table id="genre-table">
+                        <tr><th>GENRE</th></tr>
+                        <tbody>
+                            <tr><td>Thriller</td></tr>
+                            <tr><td>Science Fiction</td></tr>
+                            <tr><td>Fantasy</td></tr>
+                        </tbody>
+                  </table>
+              </div>
 
               <!-- top authors table -->
               <!-- <table id="top-author-table" style="margin-top: 25%;">
@@ -102,9 +106,20 @@
               <div class="book-boxes">
                   <div class="card">
                       <div class="title">Alice In Wonderland</div>
-                      <div class="image">
-                          <img src="images/alice.jpg" alt="">
+                      <div class="row book-card">
+                          <div class="column card-right book-image">
+                            <div class="image">
+                                <img src="images/alice.jpg" alt="">
+                            </div>
+                          </div>
+                          <div class="column card-left book-details">
+
+                              <div class="details">
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum officia laudantium laboriosam saepe reiciendis libero!</p>
+                              </div>
+                          </div>
                       </div>
+                      
                       <div class="text">
                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam cum libero explicabo temporibus sed at.</p>
                       </div>
@@ -112,8 +127,18 @@
 
                   <div class="card">
                     <div class="title">Alice In Wonderland</div>
-                    <div class="image">
-                        <img src="images/alice.jpg" alt="">
+                    <div class="row book-card">
+                        <div class="column card-right book-image">
+                          <div class="image">
+                              <img src="images/alice.jpg" alt="">
+                          </div>
+                        </div>
+                        <div class="column card-left book-details">
+
+                            <div class="details">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum officia laudantium laboriosam saepe reiciendis libero!</p>
+                            </div>
+                        </div>
                     </div>
                     <div class="text">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam cum libero explicabo temporibus sed at.</p>
@@ -122,8 +147,18 @@
 
                 <div class="card">
                     <div class="title">Alice In Wonderland</div>
-                    <div class="image">
-                        <img src="images/alice.jpg" alt="">
+                    <div class="row book-card">
+                        <div class="column card-right book-image">
+                          <div class="image">
+                              <img src="images/alice.jpg" alt="">
+                          </div>
+                        </div>
+                        <div class="column card-left book-details">
+
+                            <div class="details">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum officia laudantium laboriosam saepe reiciendis libero!</p>
+                            </div>
+                        </div>
                     </div>
                     <div class="text">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam cum libero explicabo temporibus sed at.</p>
@@ -132,8 +167,18 @@
 
                 <div class="card">
                     <div class="title">Alice In Wonderland</div>
-                    <div class="image">
-                        <img src="images/alice.jpg" alt="">
+                    <div class="row book-card">
+                        <div class="column card-right book-image">
+                          <div class="image">
+                              <img src="images/alice.jpg" alt="">
+                          </div>
+                        </div>
+                        <div class="column card-left book-details">
+
+                            <div class="details">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum officia laudantium laboriosam saepe reiciendis libero!</p>
+                            </div>
+                        </div>
                     </div>
                     <div class="text">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam cum libero explicabo temporibus sed at.</p>
@@ -159,9 +204,9 @@
 
             <!-- LOGIN FORM -->
             <form action="" id="login"" class="input-group">
-                <input type="email" class="input-field" placeholder="email id">
-                <input type="password" class="input-field" placeholder="password">
-                <button type="submit" class="submit-btn">Login</button>
+                <input type="email" class="input-field" id="inputEmailLogin" placeholder="email id">
+                <input type="password" class="input-field" id="inputPasswordLogin" placeholder="password">
+                <button type="submit" class="submit-btn" onclick="loginUser()">Login</button>
             </form>
 
             <!-- REG FORM -->
@@ -170,7 +215,7 @@
                 <input type="date" class="input-field"  id="inputDate" placeholder="Date">
                 <input type="email" class="input-field"  id="inputEmail" placeholder="email id">
                 <input type="password" class="input-field" id="inputPassword"  placeholder="password">
-                <button type="submit" class="submit-btn" onclick="addUser()">Register</button>
+                <button type="submit" class="submit-btn" id="regButton">Register</button>
             </form>
         </div>
     </section>
@@ -363,7 +408,7 @@
     
 
     <!-- SEARCH SECTION STARTS -->
-    <section class="search-section">
+    <section class="search-section" id="search">
         <h1>SEARCH RESULTS</h1>
         
         <form class="search" action="">
@@ -394,5 +439,38 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="main.js"></script>
+
+    <script>
+        document.getElementById("regButton").addEventListener('click', event =>{
+        // trim to remove the whitespaces
+        let userName = document.getElementById("inputName").value.trim();
+        let userEmail = document.getElementById("inputEmail").value.trim();
+        let userDOB = document.getElementById("inputDate").value.trim();
+        let userPassword = document.getElementById("inputPassword").value.trim();
+
+        //   conditions for validation
+        // first name
+        if (userName === "" || userEmail===""|| userPassword===""||userDOB==="") {
+            alert("FILL ALL FIELDS")
+            event.preventDefault();
+        } 
+        else if(!isEmail(userEmail)){
+            alert("Email is not in correct form")
+            event.preventDefault();
+        }
+        else {
+            addUser();
+            alert("SUCCESSFUL REGISTRATION");
+            
+        }
+        });
+
+
+        //function to check email format
+        function isEmail(email) {
+        //email regex
+        return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+        }
+    </script>
 </body>
 </html>

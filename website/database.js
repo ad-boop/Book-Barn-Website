@@ -1,7 +1,7 @@
 //Import the mysql module and create a connection pool with user details
 const mysql = require('mysql');
 const connectionPool = mysql.createPool({
-    connectionLimit: 1,
+    connectionLimit: 100,
     host: "localhost",
     user: "dg",
     password: "123456",
@@ -17,7 +17,7 @@ exports.getAllUsers = (response) => {
     //Execute query 
     connectionPool.query(sql, (err, result) => {
         if (err){//Check for errors
-            let errMsg = "{Error: " + err + "}";
+            let errMsg = "{Error: " + err + "xxx}";
             console.error(errMsg);
             response.status(400).json(errMsg);
         }
@@ -29,7 +29,7 @@ exports.getAllUsers = (response) => {
 };
 
 
-//Adds a new customer to database 
+//Adds a new user to database 
 exports.addUser = (name, email, password,dob, response) => {
     //Build query
     let sql = "INSERT INTO user (name, email, password, date_of_birth) " +
@@ -38,7 +38,7 @@ exports.addUser = (name, email, password,dob, response) => {
     //Execute query
     connectionPool.query(sql, (err, result) => {
         if (err){//Check for errors
-            let errMsg = "{Error: " + err + "}";
+            let errMsg = "{Error: " + err + "yyy}";
             console.error(errMsg);
             response.status(400).json(errMsg);
         }

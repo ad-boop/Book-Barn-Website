@@ -425,12 +425,15 @@ h1{
 }
 
 /* GENRE TABLE */
+.genres{
+  margin-top: 35%;
+}
 
 table, td, th #genre-table{
   background: var(--razzmatazz);
   border: 3px solid black;
   border-collapse: collapse;
-  padding: 10px;
+  padding: 30px;
 }
 
 
@@ -441,7 +444,7 @@ table th{
 }
 
 #genre-table, #top-author-table{
-  font-size: 1.9rem;
+  font-size: 2.5rem;
   font-weight: 500;
   width: 100%;
   height: 90%;
@@ -477,6 +480,19 @@ table th{
   
 }
 
+.card-left {
+  width: 50%;
+}
+.card-right{
+  width: 50%;
+  text-align: center;
+}
+
+.details{
+  margin-top: 20%;
+  color: var(--razzmatazz);
+}
+
 .card .title{
   font-size: 18px;
   font-weight: bold;
@@ -495,6 +511,7 @@ table th{
 .card .text{
   margin-left: 2em;
   margin-bottom: 0.5em;
+  color: #cacdd2;
 }
 
 /* FORMS */
@@ -537,8 +554,8 @@ table th{
   width: 380px;
   height: 480px;
   position: relative;
-  margin: 6% auto;
-  background: var(--palatinate-purple);
+  margin: 2.5% auto;
+  background: #762d6d;
   padding: 5px;
   overflow: hidden;
   border: 5px solid var(--razzmatazz);
@@ -590,6 +607,8 @@ table th{
   border-bottom: 3px solid #999;
   outline: none;
   background: transparent;
+  color: #cacdd2;
+  text-transform: lowercase;
 }
 
 .input-field::placeholder{
@@ -623,6 +642,9 @@ table th{
 
 /* ADD BOOK REVIEW SECTION */
 .add-book-review{
+  display: none;
+}
+.review-form{
   display: none;
 }
 .review-message,.review-form{
