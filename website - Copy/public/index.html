@@ -21,27 +21,14 @@
         <nav class="navbar">
             <ul>
                 <li><a href="home.html">home</a></li>
-                <li class="searchbar">
-                    
-                    <i class="fa fa-search" aria-hidden="true" id="search"></i>
-                     <!-- <div class="togglesearch">
-                        <input type="text" placeholder=""/>
-                        <input type="button" value="Search"/>
-                    </div> -->
-                </li>
                 <li><a href="#forms" onclick="loginClick()">login</a></li>
                 <li><a href="#user-account" onclick="accountClick()">account</a></li>
             </ul>
         </nav>
         <!-- NAV BAR ENDS -->
-
-        <!-- SEARCH BAR -->
-        <!-- <form action="" class="search-form">
-            <input type="search" name="" placeholder="search here..." id="search-box">
-            <label for="search-box" class="fas fa-search"></label>
-        </form> -->
     </header>
     <!-- header section ends -->
+
 
     <!-- banner starts -->
     <div class="banner">
@@ -75,8 +62,8 @@
     <!-- MAIN SECTION STARTS -->
     <section class="main">
         <div class="row">
-            <div class="column left">
 
+            <div class="column left">
                 <!-- genre table -->
               <div class="genres">
                   <table id="genre-table">
@@ -96,9 +83,9 @@
                         </tbody>
                   </table>
               </div>
-
             </div>
 
+            <!-- NOT WORKING- SECTION -->
             <div class="column right" id="top-books">
                 <!-- TOP BOOKS BASED ON LIKES -->
               <h2>TOP BOOKS</h2>
@@ -107,12 +94,11 @@
                       <div class="title">Alice In Wonderland</div>
                       <div class="row book-card">
                           <div class="column card-right book-image">
-                            <div class="image">
-                                <img src="images/alice.jpg" alt="">
-                            </div>
+                                <div class="image">
+                                    <img src="images/alice.jpg" alt="">
+                                </div>
                           </div>
                           <div class="column card-left book-details">
-
                               <div class="details">
                                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum officia laudantium laboriosam saepe reiciendis libero!</p>
                               </div>
@@ -189,6 +175,7 @@
     </section>
     <!-- MAIN SECTION ENDS -->
 
+
     <!-- GENRE SECTION STARTS -->
     <section class="genre-section">
         <h1>GENRE SECTION</h1>
@@ -201,7 +188,6 @@
     <!-- GENRE SECTION ENDS -->
 
 
-    <!-- <button type="button" class="collapsible forms">Login/Registration Form</button> -->
     <!-- login / registration section STARTS -->
     <section class="login-reg-form" id="forms">
         <h1>LOGIN/REGISTRATION FORMS</h1>
@@ -243,6 +229,7 @@
     <button type="button" class="collapsible forms">ADD BOOK REVIEW</button>
     <section class="add-book-review">
         <h1>ADD BOOK REVIEW SECTION</h1>
+        <!-- book review message -->
         <div class="review-message" id="review-message">
             <p id="question">Interested in posting <br> your thoughts on any books?</p>
             <p>Click the button below <i class="fa fa-arrow-circle-down"></i></p>
@@ -251,6 +238,7 @@
             <button id="add-to-review" onclick="writeReviewClick()">Add Book Review</button>
         </div>
         
+        <!--ADD BOOK -->
         <div class="total-forms" id="book-form">
             <h3>Add Book</h3>
             <div class="row">
@@ -294,6 +282,7 @@
             </div>  
         </div>
 
+        <!-- ADD REVIEW -->
         <div class="total-forms" id="review-form">
             <h3>Add Review</h3>
             <form action="">
@@ -311,11 +300,11 @@
     <!-- BOOK REVIEW SECTION ENDS -->
 
 
-    <!-- <button type="button" class="collapsible account">Account</button> -->
     <!-- USER ACCOUNT SECTION STARTS -->
     <section class="user-account" id="user-account">
         <h1>ACCOUNT SECTION</h1>
         <div class="row">
+
             <div class="column user-left">
                 <!-- USER ACCOUNT EDITING FORM -->
                 <div class="user-details-edit">
@@ -367,13 +356,11 @@
                 </div>
             </div>
         </div>
-
-        
     </section>
     <!-- ACCOUNT SECTION ENDS -->
 
 
-    <!-- GENRE SECTION STARTS -->
+    <!-- ALL REVIEWS SECTION STARTS -->
     <button type="button" class="collapsible forms">ALL REVIEWS</button>
     <section class="all-reviews-section">
         <h1>ALL REVIEWS SECTION</h1>
@@ -383,10 +370,8 @@
             <div class="book-boxes" id="all-boxes"></div>
         </div>
     </section>
-    <!-- GENRE SECTION ENDS -->
+    <!-- ALL REVIEWS SECTION ENDS -->
 
-    
-    
 
     <!-- SEARCH SECTION STARTS -->
     <section class="search-section" id="search">
@@ -418,10 +403,14 @@
     </footer>
     <!-- footer ends -->
 
+
+    <!-- JS SCRIPT -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="main.js"></script>
 
     <script>
+
+        // FUNCTION FOR ADDING USER
         document.getElementById("regButton").addEventListener('click', event =>{
         // trim to remove the whitespaces
         let userName = document.getElementById("inputName").value.trim();
@@ -441,11 +430,8 @@
         }
         else {
             addUser();
-            alert("SUCCESSFUL REGISTRATION");
-            event.preventDefault();
         }
         });
-
 
         //function to check email format
         function isEmail(email) {
@@ -454,6 +440,7 @@
         }
 
 
+        // FUNCTION FOR LOGIN BUTTON
         document.getElementById("loginButton").addEventListener('click',event=>{
             let userEmail = document.getElementById("inputEmailLogin").value.trim();
             let userPassword = document.getElementById("inputPasswordLogin").value.trim();
@@ -465,17 +452,13 @@
         else if(!isEmail(userEmail)){
             alert("Email is not in correct form")
             event.preventDefault();
-            
         }
         else{
-            
             loginUser();
-            alert("SUCCESSFUL Login");
-            // event.preventDefault();
-    
         }
         });
 
+        // FUNCTION FOR UPDATE ACCOUNT BUTTON
         document.getElementById("updateUserButton").addEventListener('click',event=>{
             let userNameEdit = document.getElementById("nameEdit").value.trim();
             let userEmailEdit = document.getElementById("emailEdit").value.trim();
@@ -488,12 +471,11 @@
             } 
             else{
                 updateAccount();
-                alert("User info is updated");
             }
         });
 
-        // document.getElementById("book-image").src=document.getElementById("FileInput").files;
-
+        
+        // FUNCTION FOR ADDING BOOKS FUNCTION
         document.getElementById("addBookButton").addEventListener('click',event=>{
             let bookTitle=document.getElementById("title").value.trim();
             let bookAuthor=document.getElementById("author").value.trim();
@@ -515,10 +497,11 @@
                 document.getElementById("review-form").style.display="block";
                 event.preventDefault();
                 alert("Book is added");
-                event.preventDefault();
             }
         });
 
+
+        // FUNCTION FOR ADDING REVIEW FUNCTION
         document.getElementById("addReviewButton").addEventListener('click',event=>{
             let bookRating=document.getElementById("rating").value.trim();
             let bookReview=document.getElementById("review").value.trim();
@@ -526,18 +509,17 @@
             if( bookRating===""|| bookReview===""){
                 alert("FILL ALL FIELDS");
                 event.preventDefault();
-
             }
             else{
                 sendReview();
-                alert("Review done");
             }
         });
 
+        // FUNCTION FOR SELECTING A GENRE
         function genreSelect(genre){
             getGenreSelectedReviews(genre);
         }
-
     </script>
+    <!-- JS SCRIPT OVER -->
 </body>
 </html>

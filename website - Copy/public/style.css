@@ -19,7 +19,6 @@
     text-decoration: none;
     outline: none;
     border: none;
-    /* text-transform: capitalize; */
     -webkit-transition: all .2s linear;
     transition: all .2s linear;
     
@@ -532,7 +531,7 @@ span.detail-text{
   color: #cacdd2;
 }
 
-/* FORMS */
+/*LOGIN REG FORMS */
 /* Style the button that is used to open and close the collapsible content */
 .collapsible {
   background-color: var(--old-burgundy);
@@ -805,6 +804,7 @@ button#upload {
   font-size: 1.2rem;
 }
 
+
 /* USER ACCOUNT  SECTION*/
 .user-account{
   display: none;
@@ -871,6 +871,7 @@ h3{
 }
 
 
+/* REVIEW CARDS */
 .user-reviews{
   padding: 20px;
   background: var(--palatinate-purple);
@@ -890,46 +891,9 @@ h3{
   text-align: center;
 }
 
-.user-likes{
-  background: var(--palatinate-purple);
-  margin-top: 35px;
-  border-radius: 10px;
-  border: 5px solid #cacdd2;
-}
-
-
-.likes-box{
-  background-color: var(--quinacridone-magenta);
-  float:left;
-  width: 25%;
-  padding: 10px;
-  height: 100px;
-  margin: 30px;/* Should be removed. Only for demonstration */
-  border: 5px solid var(--smoky-black);
-  border-radius: 10px;
-}
-
-i.fa-heart{
-  color: var(--razzmatazz);
-  font-size: 3rem;
-  float: right;
-}
-
 .all-reviews-section{
   display: none;
 }
-
-/* #comments-collapsible{
-  margin-top: 2%;
-  padding: 5px;
-  font-size: 15px;
-}
-
-#comments-collapsible:after {
-  font-size: 15px;
-} */
-
-
 
 
 #genre-boxes{
@@ -940,6 +904,9 @@ i.fa-heart{
   grid-row-gap: 25px;
 }
 
+
+
+/* SEARCH SECTIONS */
 .search-section{
   background: var(--old-burgundy);
 }
@@ -1001,7 +968,7 @@ i.fa-heart{
 
 
 
-
+/* footer section */
 footer{
   position: relative;
   bottom: 0;

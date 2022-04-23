@@ -1,5 +1,6 @@
 // SCRIPT FOR JS
     
+    // CODE FOR BANNER SLIDES
         var slides = document.querySelectorAll('.slide');
         var btns = document.querySelectorAll('.btn');
         let currentSlide = 1;
@@ -54,7 +55,7 @@
         repeat();
 
 
-
+// ====================================================================================
 // SCRIPT FOR LOGIN AND REG FORM
 var x = document.getElementById("login");
 var y = document.getElementById("register");
@@ -73,6 +74,8 @@ function login(){
 }
 
 
+// ==================================================================================
+// CODE FOR COLLAPSIBLE BUTTONS IN HTML
 var coll = document.getElementsByClassName("collapsible");
 var i;
 
@@ -89,16 +92,16 @@ for (i = 0; i < coll.length; i++) {
 }
 
 
-$(document).ready(function() {
-	$(".fa-search").click(function() {
-	   $(".togglesearch").toggle();
-	   $("input[type='text']").focus();
-	 });
-});
+// $(document).ready(function() {
+// 	$(".fa-search").click(function() {
+// 	   $(".togglesearch").toggle();
+// 	   $("input[type='text']").focus();
+// 	 });
+// });
 
 
 
-
+// FUNCTION FOR REVIEW BUTTON
 function writeReviewClick(){
   var writeReview=document.getElementById("book-form");
 
@@ -114,6 +117,7 @@ function writeReviewClick(){
 }
 
 
+// FUNCTION FOR LOGIN HEADER MENU CLICK
 function loginClick(){
   
   var forms=document.getElementById("forms");
@@ -121,8 +125,10 @@ function loginClick(){
   
 }
 
+
+
+// FUNCTION FOR ACCOUNT HEADER MENU CLICK
 function accountClick(){
   var account_section=document.getElementById("user-account");
   account_section.style.display="block";
 }
-

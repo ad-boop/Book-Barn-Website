@@ -6,7 +6,6 @@ const fileUpload = require('express-fileupload');
 
 //Create express app and configure it with body-parser
 
-
 //Import database functions
 const db = require('./database');
 const res = require('express/lib/response');
@@ -37,7 +36,7 @@ app.use(
 
 
 //Set up application to handle POST requests sent to the customers path
-app.post('/user', handlePostRequest);//Adds a new customer
+app.post('/user', addUser);//Adds a new customer
 
 app.post('/userUpdate',updateUserAccount);
 
@@ -46,39 +45,15 @@ app.get('/logout', logout);//Logs user out
 
 //Set up application to handle POST requests
 app.post('/login', login);//Logs the user in
-// app.post('/register', register);//Register a new user
 
-// app.post('/review',addReview);
 //Start the app listening on port 8080
 app.listen(8080);
 
-//Handles GET requests to our web service
-function handleGetRequest(request, response){
-    //Split the path of the request into its components
-    console.log("getusers")
-    var pathArray = request.url.split("/");
 
-    //Get the last part of the path
-    var pathEnd = pathArray[pathArray.length - 1];
 
-    //If path ends with 'customers' we return all customers
-    if(pathEnd === 'user'){
-        //Call function to return all customers
-        
-        // db.getAllUsers(response);
-        // db.getAllUsers(response);
-        // console.log(userArray.push(db.getAllUsers(response)));
-        // let users=request.body;
-        // console.log("Array:"+JSON.stringify(users));
-        // response.send(userArray);
-    }
-    else{//The path is not recognized. Return an error message
-        response.send("{error: 'Path not recognized'}")
-    }
-}
 
-//Handles POST requests to our web service
-function handlePostRequest(request, response){
+//Handles POST requests for adding user to the db
+function addUser(request, response){
     //Extract customer data
     let newUser = request.body;
     console.log("Data received: " + JSON.stringify(newUser));
@@ -89,7 +64,7 @@ function handlePostRequest(request, response){
 }
 
 
-
+// handles post request for login
 function login(request,response){
     let email = request.body.email;
 	let password = request.body.password;
@@ -106,6 +81,7 @@ function login(request,response){
     }
 }
 
+// get requestion for logged in user
 app.get('/loggedInUserDetails',function(request,response){
     let loggedInEmail=request.session.email;
     if(loggedInEmail !== null){
@@ -117,7 +93,7 @@ app.get('/loggedInUserDetails',function(request,response){
 });
 
 
-// GET /checklogin. Checks to see if the user has logged in
+// get request Checks to see if the user has logged in
 app.get('/loggedin', function(request, response) {
 	// If the user is loggedin
     console.log(request.session.loggedin);
@@ -125,9 +101,6 @@ app.get('/loggedin', function(request, response) {
 		// Output username
         response.send("LOGGEDIN");
         request.session.loggedin==true;
-        // let loggedInEmail=request.session.email;
-        // db.getLoggedInUserDetails(loggedInEmail,response);
-        // console.log("Check "+request.session.email);
     }
 	else {
 		// Not logged in
@@ -137,9 +110,7 @@ app.get('/loggedin', function(request, response) {
 });
 
 
-
-
-// GET /logout. Logs the user out.
+// GET request Logs the user out.
 function logout(request, response){
     //Destroy session.
     request.session.destroy( err => {
@@ -152,12 +123,14 @@ function logout(request, response){
 }
 
 
+// post request for updating user 
 function updateUserAccount(request,response){
     let updateUser = request.body;
     console.log("Data received: " + JSON.stringify(updateUser));
     db.userUpdateInfo(updateUser.name,updateUser.email,updateUser.password,response);
 }
 
+// post request for uploading pics in the upload file
 app.post('/fileUpload', function(request, response) {
     //Check to see if a file has been submitted on this path
     if (!request.files || Object.keys(request.files).length === 0) {
@@ -166,8 +139,6 @@ app.post('/fileUpload', function(request, response) {
 
     // The name of the input field (i.e. "myFile") is used to retrieve the uploaded file
     let myFile = request.files.myFile;
-
-    //CHECK THAT IT IS AN IMAGE FILE, NOT AN .EXE ETC.
 
     /* Use the mv() method to place the file in the folder called 'uploads' on the server.
         This is in the current directory */
@@ -184,7 +155,7 @@ app.post('/fileUpload', function(request, response) {
 });
 
 
-//Handle POST requests sent to /upload path
+//Handle POST requests for adding book data
 app.post('/reviewBook', function(request, response) {
     let bookReview = request.body;
     // console.log("Data received: " + JSON.stringify(bookReview));
@@ -193,6 +164,7 @@ app.post('/reviewBook', function(request, response) {
 });
 
 
+// handle post  request for adding review data
 app.post('/review',function(request,response){
     let review = request.body;
     // console.log("Data received: " + JSON.stringify(review));
@@ -200,8 +172,8 @@ app.post('/review',function(request,response){
 }); 
 
 
+// handle get request for getting all the reviews  
 app.get('/getreviewDetails',function(request,response){
-
     var pathArray = request.url.split("/");
 
     //Get the last part of the path
@@ -215,22 +187,14 @@ app.get('/getreviewDetails',function(request,response){
     else{//The path is not recognized. Return an error message
         response.send("{error: 'Path not recognized'}")
     }
-
 });
 
 
+// post request for selected genre reviews
 app.post('/genreSelected',function(request,response){
     let genre=request.body
     db.getGenreReviews(genre.genreChosen,response);
 });
-
-
-app.post('/comments',function(request,response){
-    let comment=request.body;
-    console.log(JSON.stringify(comment))
-    db.addComments(comment.user_id,comment.review_id,comment.comment,response);
-});
-
 
 //Export server for testing
 module.exports = app;
