@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Barn</title>
+    <link rel="icon" type="image/png" href="images/Book Barn-logos.jpeg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="client.js"></script>
+</head>
+<body>
+    <!-- header section starts  -->
+    <header class="header">
+
+        <!-- LOGO -->
+        <a href="home.html" class="logo"> BOOK BARN </a>
+
+        <!-- NAV BAR BEGINS -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="home.html">home</a></li>
+                <li class="searchbar">
+                    
+                    <i class="fa fa-search" aria-hidden="true" id="search"></i>
+                     <!-- <div class="togglesearch">
+                        <input type="text" placeholder=""/>
+                        <input type="button" value="Search"/>
+                    </div> -->
+                </li>
+                <li><a href="#forms" onclick="loginClick()">login</a></li>
+                <li><a href="#user-account" onclick="accountClick()">account</a></li>
+            </ul>
+        </nav>
+        <!-- NAV BAR ENDS -->
+
+        <!-- SEARCH BAR -->
+        <!-- <form action="" class="search-form">
+            <input type="search" name="" placeholder="search here..." id="search-box">
+            <label for="search-box" class="fas fa-search"></label>
+        </form> -->
+    </header>
+    <!-- header section ends -->
+
+    <!-- banner starts -->
+    <div class="banner">
+        <!-- SLIDER -->
+        <div class="slider">
+            <div class="slide active">
+                <img src="images/banner1.png" alt="">
+                
+              </div>
+              <div class="slide">
+                <img src="images/banner2.png" alt="">
+              </div>
+              <div class="slide">
+                <img src="images/banner3.png" alt="">
+              </div>
+              <div class="slide">
+                <img src="images/banner4.png" alt="">
+              </div>
+              
+              <div class="navigation">
+                <div class="btn active"></div>
+                <div class="btn"></div>
+                <div class="btn"></div>
+                <div class="btn"></div>
+              </div>
+        </div>
+    </div>
+    <!-- banner ends-->
+
+    
+    <!-- MAIN SECTION STARTS -->
+    <section class="main">
+        <div class="row">
+            <div class="column left">
+
+                <!-- genre table -->
+              <div class="genres">
+                  <table id="genre-table">
+                        <tr><th>GENRE</th></tr>
+                        <tbody>
+                            <tr><td><a onclick="genreSelect('Action and Adventure')">Action and Adventure</a></td></tr>
+                            <tr><td><a onclick="genreSelect('Classic')">Classic</a></td></tr>
+                            <tr><td><a onclick="genreSelect('Detective and Mystery')">Detective and Mystery</a></td></tr>
+                            <tr><td><a onclick="genreSelect('Fantasy')">Fantasy</a></td></tr>
+                            <tr><td><a onclick="genreSelect('Historical')">Historical</a></td></tr>
+                            <tr><td><a onclick="genreSelect('Horror')">Horror</a></td></tr>
+                            <tr><td><a onclick="genreSelect('Romance')">Romance</a></td></tr>
+                            <tr><td><a onclick="genreSelect('Science Fiction')">Science Fiction</a></td></tr>
+                            <tr><td><a onclick="genreSelect('Suspense and Thriller')">Suspense and Thriller</a></td></tr>
+                            <tr><td><a onclick="genreSelect('Womens Fiction')">Womens Fiction</a></td></tr>
+                            <tr><td><a onclick="genreSelect('Diary Fiction')">Diary Fiction</a></td></tr>
+                        </tbody>
+                  </table>
+              </div>
+
+            </div>
+
+            <div class="column right" id="top-books">
+                <!-- TOP BOOKS BASED ON LIKES -->
+              <h2>TOP BOOKS</h2>
+              <div class="book-boxes">
+                  <div class="card">
+                      <div class="title">Alice In Wonderland</div>
+                      <div class="row book-card">
+                          <div class="column card-right book-image">
+                            <div class="image">
+                                <img src="images/alice.jpg" alt="">
+                            </div>
+                          </div>
+                          <div class="column card-left book-details">
+
+                              <div class="details">
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum officia laudantium laboriosam saepe reiciendis libero!</p>
+                              </div>
+                          </div>
+                      </div>
+                      
+                      <div class="text">
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam cum libero explicabo temporibus sed at.</p>
+                      </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="title">Alice In Wonderland</div>
+                    <div class="row book-card">
+                        <div class="column card-right book-image">
+                          <div class="image">
+                              <img src="images/alice.jpg" alt="">
+                          </div>
+                        </div>
+                        <div class="column card-left book-details">
+
+                            <div class="details">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum officia laudantium laboriosam saepe reiciendis libero!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam cum libero explicabo temporibus sed at.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="title">Alice In Wonderland</div>
+                    <div class="row book-card">
+                        <div class="column card-right book-image">
+                          <div class="image">
+                              <img src="images/alice.jpg" alt="">
+                          </div>
+                        </div>
+                        <div class="column card-left book-details">
+
+                            <div class="details">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum officia laudantium laboriosam saepe reiciendis libero!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam cum libero explicabo temporibus sed at.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="title">Alice In Wonderland</div>
+                    <div class="row book-card">
+                        <div class="column card-right book-image">
+                          <div class="image">
+                              <img src="images/alice.jpg" alt="">
+                          </div>
+                        </div>
+                        <div class="column card-left book-details">
+
+                            <div class="details">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum officia laudantium laboriosam saepe reiciendis libero!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam cum libero explicabo temporibus sed at.</p>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </section>
+    <!-- MAIN SECTION ENDS -->
+
+    <!-- GENRE SECTION STARTS -->
+    <section class="genre-section">
+        <h1>GENRE SECTION</h1>
+
+        <!-- GENRE SECTION BOXES CATEGORIES -->
+        <div class="genre-categories">
+            <div class="book-boxes" id="genre-boxes"></div>
+        </div>
+    </section>
+    <!-- GENRE SECTION ENDS -->
+
+
+    <!-- <button type="button" class="collapsible forms">Login/Registration Form</button> -->
+    <!-- login / registration section STARTS -->
+    <section class="login-reg-form" id="forms">
+        <h1>LOGIN/REGISTRATION FORMS</h1>
+        <div class="form-box" id="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="login()">Login</button>
+                <button type="button" class="toggle-btn" onclick="register()">Register</button>
+            </div>
+
+            <!-- LOGIN FORM -->
+            <form id="login"" class="input-group">
+                <input type="email" name="email" class="input-field" id="inputEmailLogin" placeholder="email id">
+                <input type="password" name="password" class="input-field" id="inputPasswordLogin" placeholder="password">
+                <button type="submit" class="submit-btn" id="loginButton">Login</button>
+            </form>
+
+            <!-- REG FORM -->
+            <form action="" id="register"" class="input-group">
+                <input type="text" class="input-field"  id="inputName" placeholder="Name">
+                <input type="date" class="input-field"  id="inputDate" placeholder="Date">
+                <input type="email" class="input-field"  id="inputEmail" placeholder="email id">
+                <input type="password" class="input-field" id="inputPassword"  placeholder="password">
+                <button type="submit" class="submit-btn" id="regButton">Register</button>
+            </form>
+        </div>
+        <div class="successful-login" id="successful-login">
+            <p id="logout-message"></p>
+            <div class="logout-btn-box">
+                <button class="logout-btn" onclick="logoutUser()">LOGOUT</button>
+            </div>
+        </div>
+    </section>
+    <!-- LOGIN REG SECTIONS ENDS -->
+
+
+    <!-- BOOK REVIEW SECTION STARTS -->
+    <!-- book review write up -->
+    <button type="button" class="collapsible forms">ADD BOOK REVIEW</button>
+    <section class="add-book-review">
+        <h1>ADD BOOK REVIEW SECTION</h1>
+        <div class="review-message" id="review-message">
+            <p id="question">Interested in posting <br> your thoughts on any books?</p>
+            <p>Click the button below <i class="fa fa-arrow-circle-down"></i></p>
+            
+            <!-- button for writing review -->
+            <button id="add-to-review" onclick="writeReviewClick()">Add Book Review</button>
+        </div>
+        
+        <div class="total-forms" id="book-form">
+            <h3>Add Book</h3>
+            <div class="row">
+                <div class="add-photo column review-left">
+                    <div class="image-box">
+                        <img src="" alt="" id="book-image">
+                    </div>
+                    <input type="file" id="FileInput"/>
+                    <div id="ServerResponse"></div>
+                </div>
+
+                <div class="book-form column review-right">
+                    <form>
+                        <label for="name">Book Title</label>
+                        <input type="text" id="title" name="title" placeholder="Title">
+                    
+                        <label for="email">Book Author</label>
+                        <input type="text" id="author" name="author" placeholder="Author">
+
+                        <label for="published_date">Published Date</label>
+                        <input type="date" id="published_date" name="published_date" >
+
+                        <label for="genres">Select a Genre</label>
+                        <select name="genres" id="genres">
+                            <option value="">Select a Genre</option>
+                            <option value="Action and Adventure">Action and Adventure</option>
+                            <option value="Classic">Classic</option>
+                            <option value="Detective and Mystery">Detective and Mystery</option>
+                            <option value="Fantasy">Fantasy</option>
+                            <option value="Historical">Historical</option>
+                            <option value="Horror">Horror</option>
+                            <option value="Romance">Romance</option>
+                            <option value="Science Fiction">Science Fiction</option>
+                            <option value="Suspense and Thriller">Suspense and Thriller</option>
+                            <option value="Womens Fiction">Womens Fiction</option>
+                            <option value="Diary Fiction">Diary Fiction</option>
+                        </select>
+                        <input type="submit" value="Add Book" id="addBookButton">
+                    </form>
+                </div>
+            </div>  
+        </div>
+
+        <div class="total-forms" id="review-form">
+            <h3>Add Review</h3>
+            <form action="">
+                <p id="book-name"></p>
+                <label for="rating">Rating out of 10</label>
+                <input type="number" id="rating" name="rating" placeholder="rating" min="0" max="10">
+                    
+                <label for="name">Give your Review</label>
+                <textarea name="review" id="review" cols="30" rows="10"></textarea>
+
+                <input type="submit" value="Add Review" id="addReviewButton">
+            </form>
+        </div>
+    </section>
+    <!-- BOOK REVIEW SECTION ENDS -->
+
+
+    <!-- <button type="button" class="collapsible account">Account</button> -->
+    <!-- USER ACCOUNT SECTION STARTS -->
+    <section class="user-account" id="user-account">
+        <h1>ACCOUNT SECTION</h1>
+        <div class="row">
+            <div class="column user-left">
+                <!-- USER ACCOUNT EDITING FORM -->
+                <div class="user-details-edit">
+                    <h3>User Account</h3>
+                    <form id="account_edit">
+                        <input type="hidden" id="user_id_account">
+
+                        <label for="nameEdit">Full Name</label>
+                        <input type="text" id="nameEdit" name="nameEdit">
+                    
+                        <label for="emailEdit">Email</label>
+                        <input type="email" id="emailEdit" name="emailEdit" disabled>
+
+                        <label for="passwordEdit">Password</label>
+                        <input type="password" id="passwordEdit" name="passwordEdit">
+                    
+                        <label for="dobEdit">Date of Birth</label>
+                        <input type="datetime" id="dobEdit" name="dobEdit">
+                    
+                        <input type="submit" value="Submit" id="updateUserButton">
+                    </form>
+                </div>
+            </div>
+
+            <div class="column user-right">
+                <!-- USER WRITTEN REVIEWS -->
+                <div class="user-reviews">
+                    <h3>Your Reviews</h3>
+
+                    <div class="review-card">
+                        <h2>Alice in Wonderland</h2>
+                    </div>
+
+                    <div class="review-card">
+                        <h2>Alice in Wonderland</h2>
+                    </div>
+
+                    <div class="review-card">
+                        <h2>Alice in Wonderland</h2>
+                    </div>
+
+                    <div class="review-card">
+                        <h2>Alice in Wonderland</h2>
+                    </div>
+
+                    <div class="review-card">
+                        <h2>Alice in Wonderland</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    </section>
+    <!-- ACCOUNT SECTION ENDS -->
+
+
+    <!-- GENRE SECTION STARTS -->
+    <button type="button" class="collapsible forms">ALL REVIEWS</button>
+    <section class="all-reviews-section">
+        <h1>ALL REVIEWS SECTION</h1>
+
+        <!-- GENRE SECTION BOXES CATEGORIES -->
+        <div class="all-categories">
+            <div class="book-boxes" id="all-boxes"></div>
+        </div>
+    </section>
+    <!-- GENRE SECTION ENDS -->
+
+    
+    
+
+    <!-- SEARCH SECTION STARTS -->
+    <section class="search-section" id="search">
+        <h1>SEARCH RESULTS</h1>
+        
+        <form class="search" action="">
+            <input type="search" placeholder="Search here..." required>
+            <button type="submit">Search</button>
+        </form> 
+    </section>
+    <!-- SEARCH SECTION ENDS -->
+
+    
+    <!-- footer starts -->
+    <<footer>
+        <div class="footer-content">
+            <h3>Book Barn</h3>
+            <p>For the Love for books and fun</p>
+            <ul class="socials">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-envelope-open"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>copyright &copy; <a href="#">Foolish Developer</a>  </p>
+        </div>
+
+    </footer>
+    <!-- footer ends -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+
+    <script>
+        document.getElementById("regButton").addEventListener('click', event =>{
+        // trim to remove the whitespaces
+        let userName = document.getElementById("inputName").value.trim();
+        let userEmail = document.getElementById("inputEmail").value.trim();
+        let userDOB = document.getElementById("inputDate").value.trim();
+        let userPassword = document.getElementById("inputPassword").value.trim();
+
+        //   conditions for validation
+        // first name
+        if (userName === "" || userEmail===""|| userPassword===""||userDOB==="") {
+            alert("FILL ALL FIELDS")
+            event.preventDefault();
+        } 
+        else if(!isEmail(userEmail)){
+            alert("Email is not in correct form")
+            event.preventDefault();
+        }
+        else {
+            addUser();
+            alert("SUCCESSFUL REGISTRATION");
+            event.preventDefault();
+        }
+        });
+
+
+        //function to check email format
+        function isEmail(email) {
+        //email regex
+        return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+        }
+
+
+        document.getElementById("loginButton").addEventListener('click',event=>{
+            let userEmail = document.getElementById("inputEmailLogin").value.trim();
+            let userPassword = document.getElementById("inputPasswordLogin").value.trim();
+
+            if (userEmail===""|| userPassword==="") {
+            alert("FILL ALL FIELDS")
+            event.preventDefault();
+        } 
+        else if(!isEmail(userEmail)){
+            alert("Email is not in correct form")
+            event.preventDefault();
+            
+        }
+        else{
+            
+            loginUser();
+            alert("SUCCESSFUL Login");
+            // event.preventDefault();
+    
+        }
+        });
+
+        document.getElementById("updateUserButton").addEventListener('click',event=>{
+            let userNameEdit = document.getElementById("nameEdit").value.trim();
+            let userEmailEdit = document.getElementById("emailEdit").value.trim();
+            let userPasswordEdit = document.getElementById("passwordEdit").value.trim();
+            let userDObEdit = document.getElementById("dobEdit").value.trim();
+
+            if (userNameEdit===""|| userPasswordEdit===""|| userEmailEdit===""|| userDObEdit==="") {
+            alert("FILL ALL FIELDS")
+            event.preventDefault();
+            } 
+            else{
+                updateAccount();
+                alert("User info is updated");
+            }
+        });
+
+        // document.getElementById("book-image").src=document.getElementById("FileInput").files;
+
+        document.getElementById("addBookButton").addEventListener('click',event=>{
+            let bookTitle=document.getElementById("title").value.trim();
+            let bookAuthor=document.getElementById("author").value.trim();
+            let bookGenre=document.getElementById("genres").value.trim();
+            let bookPublishedDate=document.getElementById("published_date").value.trim();
+            var imageFile = document.getElementById("FileInput").files;
+
+            console.log(1);
+            if (bookTitle===""|| bookAuthor===""|| bookGenre===""||imageFile===null||bookPublishedDate==="") {
+            alert("FILL ALL FIELDS")
+            event.preventDefault();
+            } 
+            else{
+                console.log(1);
+                event.preventDefault();
+                writeBook();
+                sessionStorage.setItem("bookToReview",bookTitle);
+                document.getElementById("book-form").style.display="none";
+                document.getElementById("review-form").style.display="block";
+                event.preventDefault();
+                alert("Book is added");
+                event.preventDefault();
+            }
+        });
+
+        document.getElementById("addReviewButton").addEventListener('click',event=>{
+            let bookRating=document.getElementById("rating").value.trim();
+            let bookReview=document.getElementById("review").value.trim();
+
+            if( bookRating===""|| bookReview===""){
+                alert("FILL ALL FIELDS");
+                event.preventDefault();
+
+            }
+            else{
+                sendReview();
+                alert("Review done");
+            }
+        });
+
+        function genreSelect(genre){
+            getGenreSelectedReviews(genre);
+        }
+
+    </script>
+</body>
+</html>
